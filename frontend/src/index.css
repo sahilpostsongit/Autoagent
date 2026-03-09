@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; background: #060A0E; color: #C8D8E8; font-family: 'JetBrains Mono', monospace; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #1A2332; border-radius: 2px; }
+.grid-bg { background-image: linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px); background-size: 40px 40px; }
+.text-glow { text-shadow: 0 0 20px rgba(0,255,136,0.5); }
+.terminal-input { background: #0D1117; border: 1px solid #1A2332; color: #C8D8E8; font-family: 'JetBrains Mono', monospace; transition: border-color 0.2s; outline: none; }
+.terminal-input:focus { border-color: #00FF88; box-shadow: 0 0 0 2px rgba(0,255,136,0.1); }
+.terminal-input::placeholder { color: #4A6A8A; }
+.btn-primary { background: linear-gradient(135deg, #00FF88, #00CC6A); color: #060A0E; font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.05em; transition: all 0.2s; border: none; cursor: pointer; }
+.btn-primary:hover { box-shadow: 0 0 24px rgba(0,255,136,0.4); transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+.btn-secondary { background: transparent; border: 1px solid #1A2332; color: #C8D8E8; font-family: 'JetBrains Mono', monospace; transition: all 0.2s; cursor: pointer; }
+.btn-secondary:hover { border-color: #00FF8840; background: #00FF8808; }
+.panel { background: #0D1117; border: 1px solid #1A2332; border-radius: 4px; }
+.panel-header { border-bottom: 1px solid #1A2332; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+.log-line { animation: slideUp 0.3s ease forwards; border-left: 2px solid transparent; padding-left: 10px; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.animate-fadeIn { animation: fadeIn 0.4s ease forwards; }
+.animate-slideUp { animation: slideUp 0.4s ease forwards; }
